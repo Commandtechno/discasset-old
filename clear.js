@@ -6,9 +6,9 @@ rimraf('out.css')
 rimraf('out.lottie')
 rimraf('out.svg')
 
-fs.unlinkSync('data.client.txt')
-fs.unlinkSync('data.css.txt')
-fs.unlinkSync('data.js.txt')
+if (fs.existsSync('data.client.txt')) fs.unlinkSync('data.client.txt')
+if (fs.existsSync('data.css.txt')) fs.unlinkSync('data.css.txt')
+if (fs.existsSync('data.js.txt')) fs.unlinkSync('data.js.txt')
 
 fs.writeFileSync('data.json', JSON.stringify({
     "discasset": "1.1",
