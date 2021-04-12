@@ -1,0 +1,17 @@
+{
+  "discasset": "1.1",
+  "version": {
+    "buildId": "0",
+    "buildHash": ""
+  },
+  "assets": {
+    "css": [],
+    "cdn": [],
+    "svg": {
+      "1": [],
+      "2": []
+    },
+    "lottie": [],
+    "client": []
+  }
+}
