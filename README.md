@@ -1,5 +1,7 @@
 ![Discasset Banner](https://cdn.discordapp.com/attachments/415951527258095616/815901327681912882/discasset.banner.png)
 
+Fuck bitches, get assets
+
 My version of https://gitlab.com/derpystuff/discasset
 
 Instructions
