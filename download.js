@@ -32,10 +32,8 @@ async function download(){
     //check version
     ver = await superagent.get(`${assetHost}/assets/version.${environment}.json`)
     if(jsonstorage.version.buildHash == ver.body.hash){
-      console.log(`[Download] Version ${jsonstorage.version.buildId} (${jsonstorage.version.buildHash}) is already downloaded. Press any key to exit.`)
-      process.stdin.setRawMode(true);
-      process.stdin.resume();
-      process.stdin.on('data', process.exit.bind(process, 0));
+      console.log(`[Download] Version ${jsonstorage.version.buildId} (${jsonstorage.version.buildHash}) is already downloaded.`)
+      process.exit()
     }
     site = await superagent.get(canary)
     const match = site.text.match(script) 
@@ -69,10 +67,8 @@ async function download(){
           style = await superagent.get(`${assetHost}${matches[1]}`)
           fs.writeFileSync('data.css.txt', style.text, 'utf8')
           console.log('[Download] Stylesheet Downloaded.')
-          console.log(`[Download] Successfully downloaded files for build ${jsonstorage.version.buildId} (${jsonstorage.version.buildHash}). Press any key to exit.`)
-          process.stdin.setRawMode(true);
-          process.stdin.resume();
-          process.stdin.on('data', process.exit.bind(process, 0));
+          console.log(`[Download] Successfully downloaded files for build ${jsonstorage.version.buildId} (${jsonstorage.version.buildHash}).`)
+          process.exit()
         }
       }
     })
